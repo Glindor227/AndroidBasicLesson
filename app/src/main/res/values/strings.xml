@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">AndroidLesson</string>
-    <string name="oneLabel">Погода</string>
+    <string name="app_name">Погода</string>
+    <string name="weatherButton">Местная погода</string>
+    <string name="tempLabel">Температура</string>
+    <string name="humLabel">Влажность</string>
+    <string name="overcLabel">Облачность</string>
 </resources>
