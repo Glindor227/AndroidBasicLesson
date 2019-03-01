@@ -1,9 +1,8 @@
 <resources>
-    <string name="app_name">Погода</string>
-    <string name="weatherButton">Местная погода</string>
-    <string name="tempLabel">Температура</string>
-    <string name="humLabel">Влажность</string>
-    <string name="overcLabel">Облачность</string>
-    <string name="btnSendData">Передать данные</string>
-    <string name="speedLabel">Скорость ветра</string>
+    <string name="app_name">Weather</string>
+    <string name="tempLabel">Temperature</string>
+    <string name="humLabel">Humidity</string>
+    <string name="overcLabel">Overcast</string>
+    <string name="btnSendData">Send data</string>
+    <string name="speedLabel">Wind speed</string>
 </resources>

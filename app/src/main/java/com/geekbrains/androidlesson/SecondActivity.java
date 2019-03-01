@@ -1,7 +1,9 @@
 package com.geekbrains.androidlesson;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -9,12 +11,19 @@ import java.util.Objects;
 
 public class SecondActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("Glindor227","Стартовали SecondActivity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        SecondActivityParams sap = (SecondActivityParams) Objects.requireNonNull(getIntent().getExtras()).getSerializable(CommonActivityParam.KeyIntent);
+        Intent inIntent = getIntent();
+        if(inIntent==null) {
+            Log.e("Intent","getIntent вернул null");
+            return;
+        }
+        SecondActivityParams sap = (SecondActivityParams) Objects.requireNonNull(inIntent.getExtras()).getParcelable(CommonActivityParam.KeyIntent);
         if (sap !=null)
             SetLocalDate(sap);
 
@@ -25,7 +34,6 @@ public class SecondActivity extends AppCompatActivity {
         tvTownName.setText(sap.getName());
         TextView tvTemp = findViewById(R.id.textView_Temp);
         tvTemp.setText("21"+"\u2103");
-
         TextView tvHum = findViewById(R.id.textView_humidity);
         tvHum.setText("60%");
         tvHum.setVisibility(sap.getHum() ? View.VISIBLE : View.INVISIBLE);

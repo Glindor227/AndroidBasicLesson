@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("Glindor227","Стартовали MainActivity");
+
         Button button = findViewById(R.id.btnSendData);         // Кнопка
         button.setOnClickListener(new View.OnClickListener() {      // Обработка нажатий
             @Override
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 SecondActivityParams sap = new SecondActivityParams(((EditText)findViewById(R.id.editTextTown)).getText().toString(),
                         ((CheckBox)findViewById(R.id.checkBox)).isChecked(),
                         ((CheckBox)findViewById(R.id.checkBox2)).isChecked(),
-                        ((CheckBox)findViewById(R.id.checkBox3)).isChecked());
+                         ((CheckBox)findViewById(R.id.checkBox3)).isChecked());
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 intent.putExtra(CommonActivityParam.KeyIntent,sap);
                 startActivity(intent);
