@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 SecondActivityParams sap = new SecondActivityParams(((EditText)findViewById(R.id.editTextTown)).getText().toString(),
                         ((CheckBox)findViewById(R.id.checkBox)).isChecked(),
                         ((CheckBox)findViewById(R.id.checkBox2)).isChecked(),
-                        ((CheckBox)findViewById(R.id.checkBox3)).isChecked());
+                         ((CheckBox)findViewById(R.id.checkBox3)).isChecked());
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 intent.putExtra(CommonActivityParam.KeyIntent,sap);
                 startActivity(intent);

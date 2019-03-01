@@ -11,6 +11,7 @@ import java.util.Objects;
 
 public class SecondActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d("Glindor227","Стартовали SecondActivity");
@@ -33,7 +34,6 @@ public class SecondActivity extends AppCompatActivity {
         tvTownName.setText(sap.getName());
         TextView tvTemp = findViewById(R.id.textView_Temp);
         tvTemp.setText("21"+"\u2103");
-
         TextView tvHum = findViewById(R.id.textView_humidity);
         tvHum.setText("60%");
         tvHum.setVisibility(sap.getHum() ? View.VISIBLE : View.INVISIBLE);
